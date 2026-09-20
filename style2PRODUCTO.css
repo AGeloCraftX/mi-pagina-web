@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background: lightgray; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    /*width: 70%;*/
+    width: 1100px;
+    margin: 0px auto;
+    border: 1px solid black;
+    background: darkblue;
+
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin:0;
+    padding: 0;
+    gap: 20px;
+
+
+}
+
+.clearfix{
+    clear:both;
+}
+
+.menu-botones{
+    margin: 0px auto;
+    background:+lightblue;
+    height: 50px;
+    width: 90%;
+    flex-direction: row;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 15px ;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+#content{
+    width: 93%;
+    min-height: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article{
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.article h2{
+    font-size: 40px;
+    margin: 0;
+}
+
+
+footer{
+    background: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
