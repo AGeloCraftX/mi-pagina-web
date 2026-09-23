@@ -52,17 +52,11 @@ ul li a:hover {
 
 .menu-botones{
     margin: 0px auto;
+    margin-bottom: 30px; /* <--- Agrega esta línea para separarlo */
     background:lightblue;
     height: 70px;
     width: 96%;
-    flex-direction: row;
-    border: 1px solid black;
-    display: flex;
-    border-radius: 15px ;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 15px;
-    box-sizing: border-box;
+
 }
 
 #content{
@@ -79,7 +73,7 @@ ul li a:hover {
     font-family: Poppins, sans-serif;
     text-align: center;
     color: 000000;
-    margin: 0;
+    margin-top: 30px; 
 }
 
 .article h2{
