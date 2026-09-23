@@ -13,7 +13,7 @@ body{
     width: 1100px;
     margin: 0px auto;
     border: 1px solid black;
-    background: turquoise;
+    background: FFFFFF;
 
 }
 
@@ -71,7 +71,7 @@ nav ul{
 .article{
     font-family: Poppins, sans-serif;
     text-align: center;
-    color: white;
+    color: 000000;
     margin: 0;
 }
 
