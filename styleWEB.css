@@ -45,8 +45,8 @@ nav ul{
 .menu-botones{
     margin: 0px auto;
     background:lightblue;
-    height: 50px;
-    width: 90%;
+    height: 70px;
+    width: 96%;
     flex-direction: row;
     border: 1px solid black;
     display: flex;
