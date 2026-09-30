@@ -98,15 +98,19 @@ footer{
     width: 90%;
     line-height: 70px;
 }
-.chat-container {
-    width: 350px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.chat-container { 
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    width: 350px; 
+    background: white; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
     height: 450px;
+    z-index: 1000;
 }
 
 .chat-header { background-color: #4a90e2; color: white; padding: 15px; text-align: center; }
