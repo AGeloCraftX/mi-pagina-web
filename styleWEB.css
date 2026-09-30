@@ -88,51 +88,129 @@ ul li a:hover {
     margin: 0;
 }
 
-/* Circulos azules */
-
-/* Lado Izquierdo */
+/* Lado Izquierdo - Esferas gigantes entrelazadas de fondo */
 #container::before {
     content: "";
     position: absolute;
-    top: 220px;
-    left: 15px;
-    width: 140px;
-    height: 220px; 
+    top: 150px;       /* Ajustado para que nazca debajo de tu menú */
+    left: -250px;     /* Sacado parcialmente a la izquierda para un look moderno */
+    width: 700px;     /* CAMBIO: Tamaño gigante estilo media pantalla */
+    height: 800px;    /* CAMBIO: Altura para albergar las dos grandes esferas */
     background: 
-<<<<<<< HEAD
-        radial-gradient(circle 55px at 60px 60px, rgba(74, 144, 226, 0.2) 99%, transparent 100%), 
-=======
-        radial-gradient(circle 55px at 60px 60px, rgba(147, 226, 74, 0.2) 99%, transparent 100%), 
->>>>>>> temp-branch
-        radial-gradient(circle 55px at 80px 140px, rgba(13, 71, 161, 0.15) 99%, transparent 100%); 
+        radial-gradient(circle 300px at 300px 300px, rgba(74, 144, 226, 0.08) 99%, transparent 100%), /* Círculo superior muy suave */
+        radial-gradient(circle 300px at 400px 550px, rgba(13, 71, 161, 0.06) 99%, transparent 100%);  /* Círculo inferior entrelazado */
     pointer-events: none;
-    z-index: 1;
-    transition: transform 0.4s ease;
+    z-index: 1;       /* Queda detrás de tus textos (.article tiene prioridad) */
+    transition: transform 0.6s ease;
 }
 
-/* Lado Derecho */
+/* Lado Derecho - Esferas gigantes entrelazadas de fondo */
 #container::after {
     content: "";
     position: absolute;
-    top: 250px;
-    right: 15px;
-    width: 150px;
-    height: 240px;
+    top: 200px;
+    right: -250px;    /* Sacado parcialmente a la derecha */
+    width: 750px;     /* CAMBIO: Tamaño gigante estilo media pantalla */
+    height: 850px;    /* CAMBIO: Altura gigante */
     background: 
-        radial-gradient(circle 60px at 90px 60px, rgba(3, 169, 244, 0.15) 99%, transparent 100%), 
-        radial-gradient(circle 60px at 60px 150px, rgba(74, 144, 226, 0.2) 99%, transparent 100%); 
+        radial-gradient(circle 320px at 450px 300px, rgba(3, 169, 244, 0.06) 99%, transparent 100%),  /* Círculo superior */
+        radial-gradient(circle 320px at 300px 580px, rgba(74, 144, 226, 0.08) 99%, transparent 100%); /* Círculo inferior entrelazado */
     pointer-events: none;
     z-index: 1;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
 }
 
+/* Efecto de movimiento lento al pasar el mouse por la pantalla */
 #container:hover::before {
-    transform: translateY(-5px) scale(1.02);
+    transform: translate(10px, -10px) scale(1.01);
 }
 #container:hover::after {
-    transform: translateY(5px) scale(1.02);
+    transform: translate(-10px, 10px) scale(1.01);
 }
 
+/* ========================================================================== */
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    height: 70px;
+    width: 100%; 
+    line-height: 70px;
+    clear: both; 
+    z-index: 2; /* Para que quede por encima de las esferas de fondo */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primario {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primario:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.btn-secundario:hover {
+  background-color: #1e293b;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-delineado {
+  background-color: transparent;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-delineado:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
 
 
 footer {
@@ -179,8 +257,8 @@ footer {
 
 .chat-input button { background-color: #4a90e2; color: white; border: none; padding: 8px 15px; margin-left: 5px; border-radius: 4px; cursor: pointer; }
 
-<<<<<<< HEAD
+
 .chat-input button:hover { background-color: #357abd; }
-=======
+
 .chat-input button:hover { background-color: #357abd; }
->>>>>>> temp-branch
+
