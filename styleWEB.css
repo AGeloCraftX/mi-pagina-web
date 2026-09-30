@@ -1,24 +1,25 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-
-body{
+body {
     background: white; 
-    font-family: Arial, Helvetica, sans-serif; display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, Helvetica, sans-serif; 
 }
-#container{
-    /*width: 70%;*/
+
+#container {
     width: 1400px;
     margin: 0px auto;
     background: white;
-
+    position: relative; /* Clave para posicionar los círculos decorativos */
+    overflow: hidden;   /* Evita que los círculos rompan los márgenes de la pantalla */
+    min-height: 100vh;  /* Asegura que el contenedor tenga la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
 }
 
-header{
+header {
     height: 100px;
     width: 100%;
     margin: 0px;
@@ -28,31 +29,29 @@ header{
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: lightblue;
-  display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    display: flex;
 }
 
 ul li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 ul li a:hover {
-  background-color: #111111;
-
-
+    background-color: #111111;
 }
 
-.clearfix{
-    clear:both;
+.clearfix {
+    clear: both;
 }
 
-.menu-botones{
+.menu-botones {
     margin: 0px auto 30px auto; 
     background: lightblue;
     height: 70px;
@@ -67,9 +66,9 @@ ul li a:hover {
     box-sizing: border-box;
 }
 
-#content{
+#content {
     width: 93%;
-    min-height: 500px;
+    flex-grow: 1; /* Empuja el footer hacia la parte inferior */
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -77,17 +76,59 @@ ul li a:hover {
     align-items: center;
 }
 
-.article{
+.article {
     font-family: Poppins, sans-serif;
     text-align: center;
-    color: 000000;
+    color: #000000; 
     margin-top: 30px; 
 }
 
-.article h2{
+.article h2 {
     font-size: 40px;
     margin: 0;
 }
+
+/* Circulos azules */
+
+/* Lado Izquierdo */
+#container::before {
+    content: "";
+    position: absolute;
+    top: 220px;
+    left: 15px;
+    width: 140px;
+    height: 220px; 
+    background: 
+        radial-gradient(circle 55px at 60px 60px, rgba(74, 144, 226, 0.2) 99%, transparent 100%), 
+        radial-gradient(circle 55px at 80px 140px, rgba(13, 71, 161, 0.15) 99%, transparent 100%); 
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+/* Lado Derecho */
+#container::after {
+    content: "";
+    position: absolute;
+    top: 250px;
+    right: 15px;
+    width: 150px;
+    height: 240px;
+    background: 
+        radial-gradient(circle 60px at 90px 60px, rgba(3, 169, 244, 0.15) 99%, transparent 100%), 
+        radial-gradient(circle 60px at 60px 150px, rgba(74, 144, 226, 0.2) 99%, transparent 100%); 
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+#container:hover::before {
+    transform: translateY(-5px) scale(1.02);
+}
+#container:hover::after {
+    transform: translateY(5px) scale(1.02);
+}
+
 
 
 footer {
@@ -95,26 +136,27 @@ footer {
     color: white;
     text-align: center;
     height: 70px;
+    width: 100%; 
     line-height: 70px;
-    width: 100%;             /* O 90% si quieres que mida igual al menú */
-    margin: 40px auto 0 auto; /* Lo baja y lo centra en la pantalla */
-    clear: both;              /* Fuerza a que quede DEBAJO de cualquier elemento con float */
-    display: block;
+    clear: both; 
 }
 
-.chat-container { 
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    width: 350px; 
-    background: white; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-    overflow: hidden; 
-    display: flex; 
-    flex-direction: column; 
+/* Seccion del chat bot*/
+.chat-container {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     height: 450px;
-    z-index: 1000;
+    
+    /* Posición a la derecha del cahtboot */
+    position: fixed;
+    bottom: 20px; /* Separación del borde inferior de la pantalla */
+    right: 30px;  /* Separación del borde derecho de la pantalla */
+    z-index: 9999; /* Asegura que el chat siempre quede por encima de todo */
 }
 
 .chat-header { background-color: #4a90e2; color: white; padding: 15px; text-align: center; }
@@ -133,4 +175,4 @@ footer {
 
 .chat-input button { background-color: #4a90e2; color: white; border: none; padding: 8px 15px; margin-left: 5px; border-radius: 4px; cursor: pointer; }
 
-.chat-input button:hover { background-color: #357abd; } 
+.chat-input button:hover { background-color: #357abd; }
