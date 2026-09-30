@@ -99,7 +99,11 @@ ul li a:hover {
     width: 140px;
     height: 220px; 
     background: 
+<<<<<<< HEAD
         radial-gradient(circle 55px at 60px 60px, rgba(74, 144, 226, 0.2) 99%, transparent 100%), 
+=======
+        radial-gradient(circle 55px at 60px 60px, rgba(147, 226, 74, 0.2) 99%, transparent 100%), 
+>>>>>>> temp-branch
         radial-gradient(circle 55px at 80px 140px, rgba(13, 71, 161, 0.15) 99%, transparent 100%); 
     pointer-events: none;
     z-index: 1;
@@ -175,4 +179,8 @@ footer {
 
 .chat-input button { background-color: #4a90e2; color: white; border: none; padding: 8px 15px; margin-left: 5px; border-radius: 4px; cursor: pointer; }
 
+<<<<<<< HEAD
 .chat-input button:hover { background-color: #357abd; }
+=======
+.chat-input button:hover { background-color: #357abd; }
+>>>>>>> temp-branch

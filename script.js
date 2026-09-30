@@ -44,4 +44,17 @@ inputTexto.addEventListener('keypress', function(evento) {
     if (evento.key === 'Enter') {
         enviarMensaje();
     }
+}); const botonChat = document.getElementById('botonChat');
+const chatContainer = document.getElementById('chatContainer');
+
+botonChat.addEventListener('click', function() {
+
+    if (chatContainer.style.display === 'flex') {
+        chatContainer.style.display = 'none';
+        botonChat.textContent = '💬 Chat';
+    } else {
+        chatContainer.style.display = 'flex';
+        botonChat.textContent = '✖ Cerrar';
+    }
+
 });
