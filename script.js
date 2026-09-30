@@ -38,23 +38,22 @@ function generarRespuesta(mensaje) {
     }
 }
 
-btnEnviar.addEventListener('click', enviarMensaje);
+<script>
+    const toggleBtn = document.getElementById('chat-toggle-btn');
+    const chatContainer = document.getElementById('chatContainer');
+    const closeBtn = document.getElementById('chat-close-btn');
 
-inputTexto.addEventListener('keypress', function(evento) {
-    if (evento.key === 'Enter') {
-        enviarMensaje();
-    }
-}); const botonChat = document.getElementById('botonChat');
-const chatContainer = document.getElementById('chatContainer');
+    // Función para abrir/cerrar el chat al hacer clic en el botón flotante
+    toggleBtn.addEventListener('click', () => {
+        if (chatContainer.style.display === 'flex') {
+            chatContainer.style.display = 'none';
+        } else {
+            chatContainer.style.display = 'flex';
+        }
+    });
 
-botonChat.addEventListener('click', function() {
-
-    if (chatContainer.style.display === 'flex') {
+    // Opcional: Cerrar el chat con la "X" interna
+    closeBtn.addEventListener('click', () => {
         chatContainer.style.display = 'none';
-        botonChat.textContent = '💬 Chat';
-    } else {
-        chatContainer.style.display = 'flex';
-        botonChat.textContent = '✖ Cerrar';
-    }
-
-});
+    });
+</script>
