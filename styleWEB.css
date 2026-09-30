@@ -100,7 +100,7 @@ footer{
 }
 .chat-container { 
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 20px;
     width: 350px; 
     background: white; 
