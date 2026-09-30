@@ -38,7 +38,6 @@ function generarRespuesta(mensaje) {
     }
 }
 
-<script>
     const toggleBtn = document.getElementById('chat-toggle-btn');
     const chatContainer = document.getElementById('chatContainer');
     const closeBtn = document.getElementById('chat-close-btn');
