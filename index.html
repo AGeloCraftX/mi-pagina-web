@@ -37,20 +37,24 @@
       <p>"La mejor calidad en productos farmacéuticos y de cuidado personal"</p>
 <link rel="stylesheet" href="style.css">
 
-<button id="botonChat">💬 Chat</button>
+<!-- Botón flotante para abrir el chat -->
+<button id="chat-toggle-btn" class="chat-toggle-btn">
+    💬 <!-- Puedes poner un ícono o texto -->
+</button>
 
+<!-- Contenedor del Chat (Cerrado por defecto) -->
 <div class="chat-container" id="chatContainer">
-    <div class="chat-header">Asistente Virtual</div>
-
-    <div id="chatMensajes" class="chat-mensajes">
-        <div class="mensaje bot">
-            Hola! ¿En qué te puedo ayudar hoy?
-        </div>
+    <div class="chat-header">
+        <span>Asistente Virtual</span>
+        <!-- Opcional: Botón para cerrar dentro del chat -->
+        <button id="chat-close-btn" style="background:none; border:none; color:white; float:right; cursor:pointer;">✕</button>
     </div>
-
+    <div class="chat-mensajes">
+        <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+    </div>
     <div class="chat-input">
-        <input type="text" id="inputTexto" placeholder="Escribe un mensaje..." autocomplete="off">
-        <button id="btnEnviar">Enviar</button>
+        <input type="text" placeholder="Escribe un mensaje...">
+        <button>Enviar</button>
     </div>
 </div>
 
