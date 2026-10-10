@@ -61,25 +61,31 @@
 
 
 
-<section class="categorias-seccion">
-  <h2 class="titulo-categorias">Categorías de Productos</h2>
+<!-- SECCIÓN CON LAS 13 CATEGORÍAS EN MODO SOLO LECTURA -->
+      <section class="categorias-seccion">
+        <h2 class="titulo-categorias">Categorías de Productos</h2>
 
-  <div class="grid-categorias">
-    <a href="#" class="btn-categoria">Aseo y hogar</a>
-    <a href="#" class="btn-categoria">Bebé y maternidad</a>
-    <a href="#" class="btn-categoria">Cosméticos y maquillaje</a>
-    <a href="#" class="btn-categoria">Cuidado Capilar</a>
-    <a href="#" class="btn-categoria">Cuidado de la piel y dermocosmética</a>
-    <a href="#" class="btn-categoria">Higiene Bucal</a>
-    <a href="#" class="btn-categoria">Misceláneos</a>
-    <a href="#" class="btn-categoria">Naturales y fitoterapéuticos</a>
-    <a href="#" class="btn-categoria">Salud sexual y planificación</a>
-    <a href="#" class="btn-categoria">Vitaminas, Suplementos y nutrición</a>
-    <a href="#" class="btn-categoria">Higiene Personal</a>
-    <a href="#" class="btn-categoria">Material médico y primeros auxilios</a>
-    <a href="#" class="btn-categoria">Medicamentos</a>
-  </div>
-</section>
+        <div class="grid-categorias">
+          <button type="button" class="btn-categoria" onclick="verExcel('Aseo y hogar.xlsx')">Aseo y hogar</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Bebé y maternidad.xlsx')">Bebé y maternidad</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Cosméticos y maquillaje.xlsx')">Cosméticos y maquillaje</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Cuidado Capilar.xlsx')">Cuidado Capilar</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Cuidado de la piel y dermocosmética.xlsx')">Cuidado de la piel y dermocosmética</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Higiene Bucal.xlsx')">Higiene Bucal</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Higiene Personal.xlsx')">Higiene Personal</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Material médico y primeros auxilios.xlsx')">Material médico y primeros auxilios</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Medicamentos.xlsx')">Medicamentos</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Misceláneos.xlsx')">Misceláneos</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Naturales y fitoterapéuticos.xlsx')">Naturales y fitoterapéuticos</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Salud sexual y planificación.xlsx')">Salud sexual y planificación</button>
+          <button type="button" class="btn-categoria" onclick="verExcel('Vitaminas, Suplementos y nutrición.xlsx')">Vitaminas, Suplementos y nutrición</button>
+        </div>
+
+        <!-- MARCO DONDE SE MUESTRA EL EXCEL -->
+        <div class="contenedor-visor">
+          <iframe id="iframeVisor" src="about:blank" title="Visor de Productos Excel"></iframe>
+        </div>
+      </section>
   
 </article>
 <div class="clearfix"></div>
@@ -87,5 +93,15 @@
     <footer>
         Luis_Alejandro &copy; 2026
     </footer>
+
+      <script>
+    function verExcel(nombreArchivo) {
+      // Sustituye la URL por la ruta donde están alojados tus archivos .xlsx
+      var urlServidor = 'https://midominio.com/Productos_Farmacia/' + encodeURIComponent(nombreArchivo);
+      
+      // Abre el Excel dentro del visor oficial de Microsoft en modo Solo Lectura
+      document.getElementById('iframeVisor').src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + urlServidor;
+    }
+  </script>
 </body>
 </html>
