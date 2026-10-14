@@ -389,17 +389,5 @@ footer.canva-footer {
     background-color: #357abd;
 }
 
-/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
-@media (max-width: 400px) {
-    .chat-container {
-        width: calc(100% - 20px);
-        right: 10px;
-        bottom: 75px;
-        height: 400px;
-    }
 
-    #chat-toggle-btn {
-        right: 10px;
-        bottom: 15px;
-    }
 }
