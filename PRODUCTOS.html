@@ -1,101 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DROGUERIA_FARMA_ORQUIDEAS</title>
+    <title>Productos - Droguería Farma Orquídeas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleWEB.css">
-
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Categorías de Productoss</title>
-    
-    <button type="button" onclick="window.location.href='URL_DEL_ARCHIVO'">
-  Categoría
-</button>
-
-<a href="URL_DEL_ARCHIVO" target="_blank" class="boton-categoria">
-  Categoría
-</a>
-
+    <style>
+      .productos-container {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          width: 100%;
+          margin-bottom: 40px;
+      }
+      .producto-item {
+          background: rgba(255, 255, 255, 0.9);
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          border-radius: 20px;
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+      .producto-item h2 {
+          font-size: 28px;
+          font-weight: 800;
+          color: #0042a5;
+          margin-bottom: 10px;
+      }
+      .producto-item p {
+          font-size: 16px;
+          color: #1e293b;
+          max-width: 700px;
+          margin-bottom: 20px;
+          line-height: 1.5;
+      }
+      .producto-item img {
+          width: 100%;
+          max-width: 500px;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 12px;
+          border: 2px solid #cbd5e1;
+      }
+    </style>
 </head>
 <body>
   <div id="container">
-    <header class="mi-header">
+    <nav class="menu-botones">
+      <ul>
+        <li><a href="index.html" class="logo-dfo">DFO</a></li>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="Quiene.html">Nosotros</a></li>
+        <li><a href="PRODUCTOS.html" class="active">Categorias Productos</a></li>
+        <li><a href="CONTACTO.HTML">Contactos</a></li>
+      </ul>
+    </nav>
 
-  </header>
-  <nav class="menu-botones">
-    <ul>
-      <li>
-    <a href="index.html">Menu</a>
-      </li>
-      <li>
-    <a href="Quiene.html">¿Quienes Somos?</a>
-      </li>
-      <li>
-    <a href="PRODUCTOS.html">Productos</a>
-      </li>
-      <li>
-    <a href="CONTACTO.HTML">Contacto</a>
-      </li>
-    </ul>
-  </nav>
+    <main id="content">
+      <div style="width: 100%; max-width: 900px; margin: 0 auto;">
+        
+        <!-- Listado de Productos Principales -->
+        <div class="productos-container">
+          <div class="producto-item">
+            <h2>Acetaminofen</h2>
+            <p>Es un medicamento de venta libre que funciona como analgésico para calmar el dolor y como antipirético para bajar la fiebre.</p>
+            <img src="images/acetaminofen.jpg" alt="Acetaminofén" style="width: 500px; height: 250px;">
+          </div>
 
-  <div class="clearfix"></div>
+          <div class="producto-item">
+            <h2>Ibuprofeno</h2>
+            <p>Es un medicamento antiinflamatorio no esteroideo que sirve para calmar el dolor, reducir la inflamación y bajar la fiebre.</p>
+            <img src="images/ibuprofeno.jpg" alt="Ibuprofeno" width="500" height="250">
+          </div>
 
-  <div class="clearfix"></div>
+          <div class="producto-item">
+            <h2>Naproxeno</h2>
+            <p>Es un medicamento antiinflamatorio no esteroideo que sirve para aliviar el dolor, reducir la inflamación y bajar la fiebre.</p>
+            <img src="images/naproxeno.jpg" alt="Naproxeno" width="500" height="250">
+          </div>
 
-<article>
-  <h2>Acetaminofen</h2>
-  <p>Es un medicamento de venta libre que funciona como analgésico para calmar el dolor y como antipirético para bajar la fiebre.</p>
-  <img src="images/acetaminofen.jpg" style="width: 500px;height: 250px;">
-  <h2>Ibuprofeno</h2>
-  <p>Es un medicamento antiinflamatorio no esteroideo que sirve para calmar el dolor, reducir la inflamación y bajar la fiebre.</p>
-  <img src="images/ibuprofeno.jpg" width="500" height="250">
-  <h2>Naproxeno</h2>
-  <p>Es un medicamento antiinflamatorio no esteroideo que sirve para aliviar el dolor, reducir la inflamación y bajar la fiebre. </p>
-  <img src="images/naproxeno.jpg" width="500" height="250">
-  <h2>Omeprazol</h2>
-  <p>Es un medicamento que reduce la cantidad de ácido que produce el estómago al bloquear la enzima conocida como la bomba de protones.</p>
-  <img src="images/omeprazol.jpg" style="width: 500px;height: 250px;">
+          <div class="producto-item">
+            <h2>Omeprazol</h2>
+            <p>Es un medicamento que reduce la cantidad de ácido que produce el estómago al bloquear la enzima conocida como la bomba de protones.</p>
+            <img src="images/omeprazol.jpg" alt="Omeprazol" style="width: 500px; height: 250px;">
+          </div>
+        </div>
 
+        <!-- Sección de Categorías abajo -->
+        <div style="margin-top: 50px; margin-bottom: 30px;">
+          <h2 style="font-size: 36px; font-weight: 900; color: #ffffff; text-align: center; margin-bottom: 25px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">Categorías de Productos</h2>
+          <div class="grid-capsulas">
+            <a href="https://docs.google.com/spreadsheets/d/1LP91DL-ttJPChhyf4dHhMrfVI-o-PQ-W/edit?usp=sharing" target="_blank" class="btn-capsula">Aseo y hogar</a>
+            <a href="https://docs.google.com/spreadsheets/d/1FLaj85B_4kAoJDM26Xcx4H4twObTqZSQ/edit?usp=sharing" target="_blank" class="btn-capsula">Bebé y maternidad</a>
+            <a href="https://docs.google.com/spreadsheets/d/1iTV2H-Q3ipL3DsWS4i7VJ3uMVE2luWtd/edit?usp=sharing" target="_blank" class="btn-capsula">Cosméticos y maquillaje</a>
+            <a href="https://docs.google.com/spreadsheets/d/1px9az5Vnrs4LzXPOWrCx7lV1zd--1nGo/edit?usp=sharing" target="_blank" class="btn-capsula">Cuidado Capilar</a>
+            <a href="https://docs.google.com/spreadsheets/d/1wJkUSPYfoKyB_aduJQpLPUa0-DVDxH3T/edit?usp=sharing" target="_blank" class="btn-capsula">Cuidado de la piel y dermocosmética</a>
+            <a href="https://docs.google.com/spreadsheets/d/1tWjf5Vv9_FF_0BUmT2yP-eMQ6pSi4umX/edit?usp=sharing" target="_blank" class="btn-capsula">Higiene Bucal</a>
+            <a href="https://docs.google.com/spreadsheets/d/1dYA2UZI_Gtu6aqIdbH9IknoIslk_X17s/edit?usp=sharing" target="_blank" class="btn-capsula">Higiene Personal</a>
+            <a href="https://docs.google.com/spreadsheets/d/1W9wuvpXrsAfNDt4I2unrW9vi9D6BDINl/edit?usp=sharing" target="_blank" class="btn-capsula">Material médico y primeros auxilios</a>
+            <a href="https://docs.google.com/spreadsheets/d/1n6CoHZHzb3Lo4TlNKfZpihDh7Aa043Ck/edit?usp=sharing" target="_blank" class="btn-capsula">Medicamentos</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZuDPfRwAzJPwG8L1aFwrswop6qXtz4fX/edit?usp=sharing" target="_blank" class="btn-capsula">Misceláneos</a>
+            <a href="https://docs.google.com/spreadsheets/d/1sD6ddJOOM4e5lIGT0k1ATvzgVADh5ZWf/edit?usp=sharing" target="_blank" class="btn-capsula">Naturales y fitoterapéuticos</a>
+            <a href="https://docs.google.com/spreadsheets/d/1TC4gnGZgcqW2z57P_FK5lOEW9G0sob9H/edit?usp=sharing" target="_blank" class="btn-capsula">Salud sexual y planificación</a>
+            <a href="https://docs.google.com/spreadsheets/d/15lRIoh4NPpZ4wlilBa5h-D_Qq8HO2Yvz/edit?usp=sharing" target="_blank" class="btn-capsula">Vitaminas, Suplementos y nutrición</a>
+          </div>
+        </div>
 
+      </div>
+    </main>
 
-<section class="categorias-seccion">
-  <h2 class="titulo-categorias">Categorías de Productos</h2>
+    <!-- Botón y Chat Bot -->
+    <button id="chat-toggle-btn" class="chat-toggle-btn" title="Abrir chat">💬</button>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <span>Asistente Virtual</span>
+            <button id="chat-close-btn">✕</button>
+        </div>
+        <div class="chat-mensajes" id="chatMensajes">
+            <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="inputTexto" placeholder="Escribe un mensaje...">
+            <button id="btnEnviar" onclick="enviarMensaje()">Enviar</button>
+        </div>
+    </div>
 
-  <div class="grid-categorias">
-    <a href="https://docs.google.com/spreadsheets/d/1LP91DL-ttJPChhyf4dHhMrfVI-o-PQ-W/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Aseo y hogar</a>
-    <a href="https://docs.google.com/spreadsheets/d/1FLaj85B_4kAoJDM26Xcx4H4twObTqZSQ/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Bebé y maternidad</a>
-    <a href="https://docs.google.com/spreadsheets/d/1iTV2H-Q3ipL3DsWS4i7VJ3uMVE2luWtd/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Cosméticos y maquillaje</a>
-    <a href="https://docs.google.com/spreadsheets/d/1px9az5Vnrs4LzXPOWrCx7lV1zd--1nGo/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Cuidado Capilar</a>
-    <a href="https://docs.google.com/spreadsheets/d/1wJkUSPYfoKyB_aduJQpLPUa0-DVDxH3T/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Cuidado de la piel y dermocosmética</a>
-    <a href="https://docs.google.com/spreadsheets/d/1tWjf5Vv9_FF_0BUmT2yP-eMQ6pSi4umX/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Higiene Bucal</a>
-    <a href="https://docs.google.com/spreadsheets/d/1dYA2UZI_Gtu6aqIdbH9IknoIslk_X17s/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Higiene Personal</a>
-    <a href="https://docs.google.com/spreadsheets/d/1W9wuvpXrsAfNDt4I2unrW9vi9D6BDINl/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Material médico y primeros auxilios</a>
-    <a href="https://docs.google.com/spreadsheets/d/1n6CoHZHzb3Lo4TlNKfZpihDh7Aa043Ck/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Medicamentos</a>
-    <a href="https://docs.google.com/spreadsheets/d/1ZuDPfRwAzJPwG8L1aFwrswop6qXtz4fX/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Misceláneos</a>
-    <a href="https://docs.google.com/spreadsheets/d/1sD6ddJOOM4e5lIGT0k1ATvzgVADh5ZWf/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Naturales y fitoterapéuticos</a>
-    <a href="https://docs.google.com/spreadsheets/d/1TC4gnGZgcqW2z57P_FK5lOEW9G0sob9H/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Salud sexual y planificación</a>
-    <a href="https://docs.google.com/spreadsheets/d/15lRIoh4NPpZ4wlilBa5h-D_Qq8HO2Yvz/edit?usp=sharing&ouid=111077697256285095332&rtpof=true&sd=true" target="_blank" class="btn-categoria">Vitaminas, Suplementos y nutrición</a>
-  </div>
-</section>
-  
-</article>
-<div class="clearfix"></div>
-
-    <footer>
-        Luis_Alejandro &copy; 2026
+    <footer class="canva-footer">
+        <span>SOLO CLIENTES Y USUARIOS</span>
+        <span class="page-num">04</span>
     </footer>
-
-      <script>
-    function verExcel(nombreArchivo) {
-      // Sustituye la URL por la ruta donde están alojados tus archivos .xlsx
-      var urlServidor = 'https://midominio.com/Productos_Farmacia/' + encodeURIComponent(nombreArchivo);
-      
-      // Abre el Excel dentro del visor oficial de Microsoft en modo Solo Lectura
-      document.getElementById('iframeVisor').src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + urlServidor;
-    }
-  </script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

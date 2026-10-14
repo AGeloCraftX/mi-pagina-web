@@ -1,38 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DROGUERIA_FARMA_ORQUIDEAS</title>
+    <title>Contactos - Droguería Farma Orquídeas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleWEB.css">
-
 </head>
 <body>
   <div id="container">
-    <header class="mi-header">
+    <nav class="menu-botones">
+      <ul>
+        <li><a href="index.html" class="logo-dfo">DFO</a></li>
+        <li><a href="index.html">Menu</a></li>
+        <li><a href="Quiene.html">Nosotros</a></li>
+        <li><a href="PRODUCTOS.html">Categorias Productos</a></li>
+        <li><a href="CONTACTO.HTML" class="active">Contactos</a></li>
+      </ul>
+    </nav>
 
-  </header>
-  <nav class="menu-botones">
-    <ul>
-      <li>
-    <a href="index.html">Menu</a>
-      </li>
-      <li>
-    <a href="Quiene.html">¿Quienes Somos?</a>
-      </li>
-      <li>
-    <a href="PRODUCTOS.html">Productos</a>
-      </li>
-      <li>
-    <a href="CONTACTO.HTML">Contacto</a>
-      </li>
-    </ul>
-  </nav>
+    <main id="content">
+      <div class="hero-layout">
+        <div>
+          <h2 style="font-size: 46px; font-weight: 900; line-height: 1.05;">CONECTAMOS<br>MUNDOS!</h2>
+          <h3 style="font-size: 24px; font-weight: 700; margin-top: 15px;">Contactanos</h3>
+          <ul class="contact-info-list">
+            <li>📞 +57 (604) 622-1124 / 319 261 1968</li>
+            <li>✉️ farmaorquideas@gmail.com</li>
+            <li>🌐 envigado.gov.co</li>
+            <li>📍 Envigado Cr 42 B 23 A sur 26, Barrio las Orquídeas</li>
+          </ul>
+        </div>
+        <div class="canva-img-card">
+          <img src="images/contacto.jpg" alt="Contacto Farma Orquídeas" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'">
+        </div>
+      </div>
+    </main>
 
-<div class="clearfix"></div>
+    <!-- Botón y Chat Bot -->
+    <button id="chat-toggle-btn" class="chat-toggle-btn" title="Abrir chat">💬</button>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <span>Asistente Virtual</span>
+            <button id="chat-close-btn">✕</button>
+        </div>
+        <div class="chat-mensajes" id="chatMensajes">
+            <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="inputTexto" placeholder="Escribe un mensaje...">
+            <button id="btnEnviar" onclick="enviarMensaje()">Enviar</button>
+        </div>
+    </div>
 
-    <footer>
-        Luis_Alejandro &copy; 2026
+    <footer class="canva-footer">
+        <span>SOLO CLIENTES Y USUARIOS</span>
+        <span class="page-num">07</span>
     </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
