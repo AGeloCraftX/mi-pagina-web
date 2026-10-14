@@ -73,6 +73,12 @@ function generarRespuesta(mensaje) {
     } else if (msg.includes('dónde') || msg.includes('ubicación') || msg.includes('dirección') || msg.includes('queda')) {
         return 'Nos encontramos en la [Escribe aquí tu dirección]. ¡Te esperamos!';
         
+    //  EASTER EGGs OCULTO 
+    } else if (msg.includes('tu que haces en mi juego') || msg.includes('Tu que haces en mi juego') || msg.includes('TU QUE HACES EN MI JUEGO') || msg.includes('tU QUE HACES EN MI JUEGO')) {
+        return '👾 **[EASTER EGG ENCONTRADO]**\n\n' +
+               '🎤 *Huggy Wuggy:* "¿Acaso quieres que te mate?" \n\n' +
+               '¡Desbloqueaste un EASTER EGG! ¿Quieres seguir buscando o buscas algún remedio? 💊';
+        
     
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
