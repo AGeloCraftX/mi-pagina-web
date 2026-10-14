@@ -1,4 +1,4 @@
-// Elementos del chat
+ // Elementos del chat
 const inputTexto = document.getElementById('inputTexto');
 const btnEnviar = document.getElementById('btnEnviar');
 const chatMensajes = document.getElementById('chatMensajes');
