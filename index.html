@@ -1,44 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DROGUERIA_FARMA_ORQUIDEAS</title>
+    <title>Droguería Farma Orquídeas</title>
+    <!-- Fuente moderna desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleWEB.css">
 </head>
 <body>
   <div id="container">
     <header class="mi-header">
+      <div class="header-content">
+        <h1>🌸 Droguería Farma Orquídeas</h1>
+      </div>
     </header>
 
     <nav class="menu-botones">
       <ul>
-        <li>
-          <a href="index.html">Menu</a>
-        </li>
-        <li>
-          <a href="Quiene.html">¿Quienes Somos?</a>
-        </li>
-        <li>
-          <a href="PRODUCTOS.html">Productos</a>
-        </li>
-        <li>
-          <a href="CONTACTO.HTML">Contacto</a>
-        </li>
+        <li><a href="index.html" class="active">Menú</a></li>
+        <li><a href="Quiene.html">¿Quiénes Somos?</a></li>
+        <li><a href="PRODUCTOS.html">Productos</a></li>
+        <li><a href="CONTACTO.HTML">Contacto</a></li>
       </ul>
     </nav>
 
-    <div class="clearfix"></div>
-
-    <section id="content">
-      <article class="article">
-        <h2>DROGUERIA FARMA ORQUIDEAS</h2>
-        <p>"La mejor calidad en productos farmacéuticos y de cuidado personal"</p>
+    <main id="content">
+      <article class="article hero-card">
+        <h2>DROGUERÍA FARMA ORQUÍDEAS</h2>
+        <p class="tagline">"La mejor calidad en productos farmacéuticos y de cuidado personal"</p>
+        <div class="cta-buttons">
+          <a href="PRODUCTOS.html" class="btn-primary">Ver Productos</a>
+          <a href="CONTACTO.HTML" class="btn-secondary">Contáctanos</a>
+        </div>
       </article>
-    </section>
+
+      <section class="features-grid">
+        <div class="feature-card">
+          <div class="icon">💊</div>
+          <h3>Medicamentos</h3>
+          <p>Amplia variedad de medicamentos con registro sanitario y excelente precio.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🧴</div>
+          <h3>Cuidado Personal</h3>
+          <p>Productos para la salud de la piel, aseo e higiene para toda la familia.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🤝</div>
+          <h3>Atención Especializada</h3>
+          <p>Te brindamos asesoría confiable para resolver tus dudas de salud.</p>
+        </div>
+      </section>
+    </main>
 
     <!-- Botón flotante para abrir el chat -->
-    <button id="chat-toggle-btn" class="chat-toggle-btn">
+    <button id="chat-toggle-btn" class="chat-toggle-btn" title="Abrir chat">
         💬
     </button>
 
@@ -46,7 +65,7 @@
     <div class="chat-container" id="chatContainer">
         <div class="chat-header">
             <span>Asistente Virtual</span>
-            <button id="chat-close-btn" style="background:none; border:none; color:white; float:right; cursor:pointer;">✕</button>
+            <button id="chat-close-btn">✕</button>
         </div>
         <div class="chat-mensajes">
             <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
@@ -60,7 +79,7 @@
     <script src="script.js"></script>
 
     <footer>
-        Luis_Alejandro &copy; 2026
+        <p>Luis_Alejandro &copy; 2026 | Droguería Farma Orquídeas</p>
     </footer>
   </div>
 </body>
