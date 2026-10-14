@@ -1,51 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Droguería Farma Orquídeas - Menú</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styleWEB.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div id="container">
-    <nav class="menu-botones">
-      <ul>
-        <li><a href="index.html" class="logo-dfo">DFO</a></li>
-        <li><a href="index.html" class="active">Menu</a></li>
-        <li><a href="Quiene.html">Nosotros</a></li>
-        <li><a href="PRODUCTOS.html">Categorías Productos</a></li>
-        <li><a href="CONTACTO.HTML">Contactos</a></li>
-      </ul>
-    </nav>
 
-    <main id="content">
-      <h1 class="hero-title-big">DROGUERÍA FARMA<br>ORQUÍDEAS</h1>
-    </main>
+    <div id="container">
 
-    <!-- Botón y Chat Bot -->
-    <button id="chat-toggle-btn" class="chat-toggle-btn" title="Abrir chat">💬</button>
-    <div class="chat-container" id="chatContainer">
-        <div class="chat-header">
-            <span>Asistente Virtual</span>
-            <button id="chat-close-btn">✕</button>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu-botones">
+            <ul>
+                <li><a href="index.html" class="logo-dfo">DFO</a></li>
+                <li><a href="index.html" class="active">Menu</a></li>
+                <li><a href="Quiene.html">Nosotros</a></li>
+                <li><a href="PRODUCTOS.html">Categorías Productos</a></li>
+                <li><a href="CONTACTO.HTML">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main id="content">
+            <h1 class="hero-title-big">
+                DROGUERÍA FARMA<br>ORQUÍDEAS
+            </h1>
+        </main>
+
+        <!-- BOTÓN PARA ABRIR EL CHATBOT -->
+        <button
+            type="button"
+            id="chat-toggle-btn"
+            class="chat-toggle-btn"
+            title="Abrir chat"
+            aria-label="Abrir asistente virtual">
+            💬
+        </button>
+
+        <!-- VENTANA DEL CHATBOT -->
+        <div class="chat-container" id="chatContainer">
+
+            <!-- ENCABEZADO -->
+            <div class="chat-header">
+                <span>Asistente Virtual</span>
+
+                <button
+                    type="button"
+                    id="chat-close-btn"
+                    aria-label="Cerrar chat">
+                    ✕
+                </button>
+            </div>
+
+            <!-- MENSAJES -->
+            <div class="chat-mensajes" id="chatMensajes">
+                <div class="mensaje bot">
+                    ¡Hola! ¿En qué puedo ayudarte hoy?
+                </div>
+            </div>
+
+            <!-- CAMPO DE TEXTO Y BOTÓN ENVIAR -->
+            <div class="chat-input">
+                <input
+                    type="text"
+                    id="inputTexto"
+                    placeholder="Escribe un mensaje..."
+                    autocomplete="off"
+                    aria-label="Escribe tu mensaje">
+
+                <button type="button" id="btnEnviar">
+                    Enviar
+                </button>
+            </div>
+
         </div>
-        <div class="chat-mensajes" id="chatMensajes">
-            <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="inputTexto" placeholder="Escribe un mensaje...">
-            <button id="btnEnviar" onclick="enviarMensaje()">Enviar</button>
-        </div>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="canva-footer">
+            <span>SOLO CLIENTES Y USUARIOS</span>
+            <span class="page-num">01</span>
+        </footer>
+
     </div>
 
-    <footer class="canva-footer">
-        <span>SOLO CLIENTES Y USUARIOS</span>
-        <span class="page-num">01</span>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+    <!-- JAVASCRIPT DEL CHATBOT -->
+    <script src="script.js"></script>
+
 </body>
 </html>
