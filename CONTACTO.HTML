@@ -39,19 +39,21 @@
       </div>
     </main>
 
-    <!-- Botón y Chat Bot -->
-    <button id="chat-toggle-btn" class="chat-toggle-btn" title="Abrir chat">💬</button>
+    <!-- Botón circular del Chatbot -->
+    <button id="chat-toggle-btn" title="Abrir chat" aria-label="Abrir asistente virtual">💬</button>
+
+    <!-- Ventana del Chatbot -->
     <div class="chat-container" id="chatContainer">
         <div class="chat-header">
             <span>Asistente Virtual</span>
-            <button id="chat-close-btn">✕</button>
+            <button id="chat-close-btn" aria-label="Cerrar chat">✕</button>
         </div>
         <div class="chat-mensajes" id="chatMensajes">
             <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
         </div>
         <div class="chat-input">
-            <input type="text" id="inputTexto" placeholder="Escribe un mensaje...">
-            <button id="btnEnviar" onclick="enviarMensaje()">Enviar</button>
+            <input type="text" id="inputTexto" placeholder="Escribe un mensaje..." autocomplete="off" aria-label="Escribe tu mensaje">
+            <button type="button" id="btnEnviar">Enviar</button>
         </div>
     </div>
 

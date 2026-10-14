@@ -70,25 +70,25 @@
           <div class="producto-item">
             <h2>Acetaminofén</h2>
             <p>Es un medicamento de venta libre que funciona como analgésico para calmar el dolor y como antipirético para bajar la fiebre.</p>
-            <img src="images/acetaminofen.jpg" alt="Acetaminofén" style="width: 500px; height: 250px;">
+            <img src="images/acetaminofen.jpg" alt="Acetaminofén">
           </div>
 
           <div class="producto-item">
             <h2>Ibuprofeno</h2>
             <p>Es un medicamento antiinflamatorio no esteroideo que sirve para calmar el dolor, reducir la inflamación y bajar la fiebre.</p>
-            <img src="images/ibuprofeno.jpg" alt="Ibuprofeno" width="500" height="250">
+            <img src="images/ibuprofeno.jpg" alt="Ibuprofeno">
           </div>
 
           <div class="producto-item">
             <h2>Naproxeno</h2>
             <p>Es un medicamento antiinflamatorio no esteroideo que sirve para aliviar el dolor, reducir la inflamación y bajar la fiebre.</p>
-            <img src="images/naproxeno.jpg" alt="Naproxeno" width="500" height="250">
+            <img src="images/naproxeno.jpg" alt="Naproxeno">
           </div>
 
           <div class="producto-item">
             <h2>Omeprazol</h2>
             <p>Es un medicamento que reduce la cantidad de ácido que produce el estómago al bloquear la enzima conocida como la bomba de protones.</p>
-            <img src="images/omeprazol.jpg" alt="Omeprazol" style="width: 500px; height: 250px;">
+            <img src="images/omeprazol.jpg" alt="Omeprazol">
           </div>
         </div>
 
@@ -115,19 +115,21 @@
       </div>
     </main>
 
-    <!-- Botón y Chat Bot -->
-    <button id="chat-toggle-btn" class="chat-toggle-btn" title="Abrir chat">💬</button>
+    <!-- Botón circular del Chatbot -->
+    <button id="chat-toggle-btn" title="Abrir chat" aria-label="Abrir asistente virtual">💬</button>
+
+    <!-- Ventana del Chatbot -->
     <div class="chat-container" id="chatContainer">
         <div class="chat-header">
             <span>Asistente Virtual</span>
-            <button id="chat-close-btn">✕</button>
+            <button id="chat-close-btn" aria-label="Cerrar chat">✕</button>
         </div>
         <div class="chat-mensajes" id="chatMensajes">
             <div class="mensaje bot">¡Hola! ¿En qué puedo ayudarte hoy?</div>
         </div>
         <div class="chat-input">
-            <input type="text" id="inputTexto" placeholder="Escribe un mensaje...">
-            <button id="btnEnviar" onclick="enviarMensaje()">Enviar</button>
+            <input type="text" id="inputTexto" placeholder="Escribe un mensaje..." autocomplete="off" aria-label="Escribe tu mensaje">
+            <button type="button" id="btnEnviar">Enviar</button>
         </div>
     </div>
 

@@ -1,7 +1,7 @@
 /* ==========================================
    RESET Y FUENTES GLOBALES
    ========================================== */
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -211,7 +211,6 @@ body::after {
     transform: scale(1.03);
 }
 
-/* Estilo alterno amarillo (para secciones tipo Cuidado Capilar / Higiene Bucal) */
 .theme-yellow {
     background: linear-gradient(135deg, #ffe066 0%, #fca5a5 100%) !important;
 }
@@ -263,65 +262,95 @@ footer.canva-footer {
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
-   ```css
-   /* ==========================================
-   Chat Bot
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    z-index: 900;
+}
+
+/* ==========================================
+   CHAT BOT (Diseño Moderno y Botón Circular)
    ========================================== */
-/* BOTÓN PARA ABRIR EL CHAT */
+
+/* BOTÓN CIRCULAR FLOTANTE */
 #chat-toggle-btn {
     position: fixed;
-    bottom: 20px;
-    right: 30px;
-    background-color: #4a90e2;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 24px;
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 9999;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 #chat-toggle-btn:hover {
-    background-color: #357abd;
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #357abd 0%, #2a5f98 100%);
 }
 
-/* VENTANA DEL CHATBOT */
+/* VENTANA EMERGENTE DEL CHATBOT */
 .chat-container {
-    width: 350px;
+    width: 360px;
+    height: 480px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     display: none;
     flex-direction: column;
-    height: 450px;
-
-    /* Posición en la esquina inferior derecha */
     position: fixed;
-    bottom: 75px;
-    right: 30px;
+    bottom: 95px;
+    right: 25px;
     z-index: 9999;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    animation: fadeInChat 0.3s ease;
+}
+
+@keyframes fadeInChat {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ENCABEZADO */
 .chat-header {
-    background-color: #4a90e2;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 16px;
 }
 
-/* BOTÓN DE CERRAR EN EL ENCABEZADO */
+/* BOTÓN DE CERRAR CON "X" */
 #chat-close-btn {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+#chat-close-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 /* ÁREA DE MENSAJES */
@@ -331,23 +360,26 @@ footer.canva-footer {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background-color: #f9f9f9;
+    gap: 12px;
+    background-color: #f8fafc;
 }
 
-/* MENSAJES */
+/* ESTILO DE LOS MENSAJES */
 .mensaje {
     padding: 10px 14px;
-    border-radius: 8px;
+    border-radius: 12px;
     max-width: 80%;
+    font-size: 14px;
+    line-height: 1.4;
     overflow-wrap: anywhere;
 }
 
 /* MENSAJES DEL BOT */
 .mensaje.bot {
-    background-color: #e1e6ec;
-    color: #333;
+    background-color: #e2e8f0;
+    color: #1e293b;
     align-self: flex-start;
+    border-bottom-left-radius: 2px;
 }
 
 /* MENSAJES DEL USUARIO */
@@ -355,24 +387,31 @@ footer.canva-footer {
     background-color: #4a90e2;
     color: white;
     align-self: flex-end;
+    border-bottom-right-radius: 2px;
 }
 
 /* CAMPO PARA ESCRIBIR */
 .chat-input {
     display: flex;
-    padding: 10px;
+    padding: 12px;
     background: white;
-    border-top: 1px solid #ddd;
-    gap: 5px;
+    border-top: 1px solid #e2e8f0;
+    gap: 8px;
 }
 
 .chat-input input {
     flex: 1;
     min-width: 0;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
     outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.chat-input input:focus {
+    border-color: #4a90e2;
 }
 
 /* BOTÓN ENVIAR */
@@ -380,14 +419,13 @@ footer.canva-footer {
     background-color: #4a90e2;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 10px 16px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
 .chat-input button:hover {
     background-color: #357abd;
-}
-
-
 }
