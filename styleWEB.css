@@ -9,12 +9,7 @@ body {
 }
 
 #container {
-    width: 1400px;
-    margin: 0px auto;
-    background: white;
-    position: relative; /* Clave para posicionar los círculos decorativos */
-    overflow: hidden;   /* Evita que los círculos rompan los márgenes de la pantalla */
-    min-height: 100vh;  /* Asegura que el contenedor tenga la altura de la pantalla */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -188,15 +183,19 @@ ul li a:hover {
   transform: translateY(0);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
 
 footer {
-    background: black;
+    margin-top: auto;
+    background-color: black;
     color: white;
     text-align: center;
-    height: 70px;
-    width: 100%; 
-    line-height: 70px;
-    clear: both; 
+    padding: 15px;
 }
 
 /* ==========================================
