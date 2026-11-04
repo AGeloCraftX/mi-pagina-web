@@ -72,10 +72,58 @@ function generarRespuesta(mensaje) {
     // 7. Ubicación
     } else if (msg.includes('dónde') || msg.includes('ubicación') || msg.includes('dirección') || msg.includes('queda')) {
         return 'Nos encontramos en la [Escribe aquí tu dirección]. ¡Te esperamos!';
+
+     // Categoría: Vitaminas, suplementos y nutrición
+    } else if (msg.includes('vitaminas') || msg.includes('suplementos') || msg.includes('nutrición') || msg.includes('nutricion')) {
+        return 'En la categoría de Vitaminas, suplementos y nutrición tenemos 112 productos disponibles para cuidar tu salud y bienestar.';
+
+    // Categoría: Salud sexual y planificación
+    } else if (msg.includes('sexual') || msg.includes('planificación') || msg.includes('planificacion') || msg.includes('preservativos')) {
+        return 'En la categoría de Salud sexual y planificación contamos con 44 productos disponibles.';
+
+    // Categoría: Naturales y fitoterapéuticos
+    } else if (msg.includes('naturales') || msg.includes('fitoterapéuticos') || msg.includes('fitoterapeuticos') || msg.includes('natural')) {
+        return 'En la categoría de Naturales y fitoterapéuticos tenemos 21 productos de origen natural disponibles.';
+
+    // Categoría: Misceláneos
+    } else if (msg.includes('misceláneos') || msg.includes('miscelaneos') || msg.includes('varios')) {
+        return 'En la categoría de Misceláneos disponemos de 37 productos variados.';
+
+    // Categoría: Medicamentos
+    } else if (msg.includes('medicamentos') || msg.includes('pastillas') || msg.includes('jarabe') || msg.includes('pastilla')) {
+        return 'En la categoría de Medicamentos contamos con un catálogo de 643 productos.';
+
+    // Categoría: Material médico y primeros auxilios
+    } else if (msg.includes('material médico') || msg.includes('material medico') || msg.includes('primeros auxilios') || msg.includes('auxilios')) {
+        return 'En la categoría de Material médico y primeros auxilios tenemos 134 productos disponibles.';
+
+    // Categoría: Higiene personal
+    } else if (msg.includes('higiene') || msg.includes('personal') || msg.includes('aseo personal')) {
+        return 'En la categoría de Higiene personal tenemos 128 productos para tu cuidado diario.';
+
+    // Categoría: Cuidado de la piel y dermocosmética
+    } else if (msg.includes('piel') || msg.includes('dermocosmética') || msg.includes('dermocosmetica') || msg.includes('crema facial')) {
+        return 'En la categoría de Cuidado de la piel y dermocosmética contamos con 91 productos.';
+
+    // Categoría: Cuidado capilar
+    } else if (msg.includes('capilar') || msg.includes('cabello') || msg.includes('shampoo') || msg.includes('champu')) {
+        return 'En la categoría de Cuidado capilar tenemos 90 productos para tu cabello.';
+
+    // Categoría: Cosméticos y maquillaje
+    } else if (msg.includes('cosméticos') || msg.includes('cosmeticos') || msg.includes('maquillaje')) {
+        return 'En la categoría de Cosméticos y maquillaje disponemos de 84 productos.';
+
+    // Categoría: Bebé y maternidad
+    } else if (msg.includes('bebé') || msg.includes('bebe') || msg.includes('maternidad') || msg.includes('pañales')) {
+        return 'En la categoría de Bebé y maternidad tenemos 46 productos para los más pequeños y el cuidado materno.';
+
+    // Categoría: Aseo y hogar
+    } else if (msg.includes('aseo') || msg.includes('hogar') || msg.includes('limpieza')) {
+        return 'En la categoría de Aseo y hogar tenemos 12 productos disponibles para el mantenimiento del hogar.';
         
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
-        return 'Interesante... Cuéntame más sobre eso o pregúntame otra cosa.';
+        return 'Perdona no puedo ayudarte con tu solicitud.';
     }
 }
 
