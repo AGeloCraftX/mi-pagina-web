@@ -39,7 +39,7 @@ function generarRespuesta(mensaje) {
 
     // 1. Saludos
     if (msg.includes('hola') || msg.includes('saludos') || msg.includes('buenas')) {
-        return '¡Hola! Soy un asistente virtual puedes preguntar sobre las categorías de productos como: Vitaminas, suplementos y nutrición, Salud sexual y planificación, Naturales y fitoterapéuticos, Misceláneos, Medicamentos, Material médico y primeros auxilios, Higiene personal, Cuidado de la piel y dermocosmética, Cuidado capilar, Cosméticos y maquillaje, Bebé y maternidad, Aseo y hogar  ';
+        return '¡Hola! Soy un asistente virtual puedes preguntar sobre las categorías de productos como: Vitaminas, suplementos y nutrición, Salud sexual y planificación, Naturales y fitoterapéuticos, Misceláneos, Medicamentos, Material médico y primeros auxilios, Higiene personal, Cuidado de la piel y dermocosmética, Cuidado capilar, Cosméticos y maquillaje, Bebé y maternidad, Aseo y hogar, Ademas puedes perguntar sobre informacion general de la Farmacia ';
 
     // 2. Sobre ti / Identidad
     } else if (msg.includes('nombre') || msg.includes('quién eres')) {
@@ -266,6 +266,17 @@ function generarRespuesta(mensaje) {
         return 'La Prestobarba Gillette 3 hojas cuesta $7.000, Prestobarba Venus Rosada $6.500 y Schick Xtreme 3 Sensitive $5.500 la unidad.';
 
      //SE VIENEN COSITAS
+     } else if (msg.includes('le digo hola') || msg.includes('Le digo hola')) {
+        return 'Y ella me dice goodbye.';
+    } else if (msg.includes('le digo nena') || msg.includes('le digo nena')) {
+        return 'Como tu ya no hay.';
+     } else if (msg.includes('me dice que tiene novio pro yo no le creo') || msg.includes('Me dice que tiene novio pro yo no le creo')) {
+        return 'Y es que se complica cada vez que la veo.';
+    } else if (msg.includes('tu que haces en mi juego') || msg.includes('Tu que haces en mi juego')) {
+        return ' Acaso quieres que te mate?.';
+    } else if (msg.includes('¿Quien es Dios?') || msg.includes('Quien es Dios') || msg.includes('Quien es dios')) {
+        return 'el Ser Supremo, creador, sustentador y gobernador del universo.';
+    
         
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
