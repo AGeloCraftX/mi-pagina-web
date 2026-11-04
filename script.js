@@ -120,6 +120,102 @@ function generarRespuesta(mensaje) {
     // Categoría: Aseo y hogar
     } else if (msg.includes('aseo') || msg.includes('hogar') || msg.includes('limpieza')) {
         return 'En la categoría de Aseo y hogar tenemos 12 productos disponibles para el mantenimiento del hogar.';
+
+     // Productos de Vitaminas, suplementos y nutrición
+    } else if (msg.includes('activox')) {
+        return 'El Actiox x 12 sobres (4 tabletas masticables) de Natural Freshly tiene un valor de $40.000 la caja o $3.500 por unidad.';
+    } else if (msg.includes('bilsyl') || msg.includes('silimarina')) {
+        return 'El Bilsyl 240mg (Silimarina) lo tenemos en presentación de 20 cápsulas a $39.000 o por blíster de 10 cápsulas a $19.500.';
+    } else if (msg.includes('biotina')) {
+        return 'La Biotina de 900 mcg en caja de 30 cápsulas blandas cuesta $28.900, y en presentación de 15 cápsulas a $15.000.';
+    } else if (msg.includes('centrum')) {
+        return 'Contamos con Centrum Advance x 30 tabletas a $42.900 y Centrum Silver +50 años x 30 tabletas a $47.900.';
+    } else if (msg.includes('colageno') || msg.includes('colágeno')) {
+        return 'El Colágeno Hidrolizado de 500 mg (caja x 30 cápsulas blandas) tiene un precio de $29.900.';
+
+     // Productos de Misceláneos
+    } else if (msg.includes('cargador') || msg.includes('tipo c')) {
+        return 'Contamos con el Cargador Tipo C de Ora a un precio de $12.900.';
+    } else if (msg.includes('chocolatina') || msg.includes('hershey') || msg.includes('twix')) {
+        return 'Tenemos la Chocolatina Hershey’s Cookies\'n Cream a $9.500 y la Chocolatina Twix de 50.7 g a $8.900.';
+    } else if (msg.includes('pila') || msg.includes('pilas')) {
+        return 'Disponemos de pilas alcalinas como la Panasonic AA a $5.500 la unidad, el par de pilas Panasonic AAA alcalinas a $5.900, y pilas Tronex 9V a $9.500.';
+    } else if (msg.includes('simcard') || msg.includes('claro')) {
+        return 'Tenemos Simcard Claro disponible por solo $5.000.';
+    } else if (msg.includes('trolli') || msg.includes('gomas') || msg.includes('dulces')) {
+        return 'Ofrecemos variedad de gomas Trolli (Anillos, Banana, Mordiscos Tiburón, etc.) de 40g a 45g por un precio de $2.000 cada una.';
+
+     // Productos de Naturales y fitoterapéuticos
+    } else if (msg.includes('calendula') || msg.includes('caléndula')) {
+        return 'Tenemos Caléndula de Natural Medy en caja x 15 sachets a $43.000 (o $3.000 por unidad) y la presentación en crema de Caléndula y Árnica x 110g a $8.900.';
+    } else if (msg.includes('kanabis') || msg.includes('cannabis')) {
+        return 'Contamos con la Crema Mentolada Kanabis con árnica y caléndula (20 g) de Cosmenales por $11.900.';
+    } else if (msg.includes('totuma') || msg.includes('jarabe')) {
+        return 'El Jarabe de Totuma con Miel y Eucalipto (240 ml) de Natural Medy tiene un valor de $18.500.';
+    } else if (msg.includes('propol') || msg.includes('propolis') || msg.includes('propóleo')) {
+        return 'Ofrecemos Propol-VK (Propóleo, miel y jengibre) de 120 ml a $19.900, y el Propolis Cough con polen de 180 ml a $12.500.';
+    } else if (msg.includes('vitafer') || msg.includes('zarzaparrilla')) {
+        return 'Tenemos Vitafer-L en sachets de 10 ml a $2.000 la unidad y la Zarzaparrilla Fenat (360 ml) de Natural Medy a $19.900.';
+
+     // Productos de Medicamentos
+    } else if (msg.includes('acetaminofen') || msg.includes('acetaminofén')) {
+        return 'El Acetaminofén 500 mg de Genfar cuesta $14.900 la caja x 100 tabletas (o $1.500 el blíster), y el Acetaminofén Forte + Cafeína (MK) cuesta $2.000 la unidad.';
+    } else if (msg.includes('aciclovir')) {
+        return 'El Aciclovir 5% crema (15 g) cuesta $12.500 y en tabletas de 800 mg de Laproff tiene un costo de $18.500 el blíster de 10 tabletas.';
+    } else if (msg.includes('advil')) {
+        return 'Tenemos Advil Gripa Max cápsula líquida a $3.300 la unidad, Advil Teens Minis (36 cap) a $2.500 la unidad y Advil Ultra a $2.900 la unidad.';
+    } else if (msg.includes('amoxicilina')) {
+        return 'La Amoxicilina 500 mg de Delta cuesta $4.900 el blíster (o $49.000 caja x 100) y en suspensión (250 mg / 100 ml) a $11.900.';
+    } else if (msg.includes('apronax')) {
+        return 'El Apronax Liquid Gels 275 mg de Bayer tiene un costo de $2.500 por unidad o $24.900 el blíster de 10 cápsulas.';
+
+    // Productos de Material médico y primeros auxilios
+    } else if (msg.includes('alcohol')) {
+        return 'Contamos con Alcohol Antiséptico al 70% x 120 ml a $3.500 (OSA), x 345 ml a $6.500 y presentación de 700 ml (JGB) a $12.500.';
+    } else if (msg.includes('algodon') || msg.includes('algodón')) {
+        return 'El Algodón Higietex está disponible en presentación de 25 g a $3.000 y de 50 g a $5.500.';
+    } else if (msg.includes('curas')) {
+        return 'Las Curas Medicare resistentes al agua piel tienen un costo de $200 la unidad, $1.900 el blíster x 10 o $17.000 la caja x 100.';
+    } else if (msg.includes('esparadrapo')) {
+        return 'Ofrecemos Esparadrapo de tela Begut (1x1) a $3.900 la unidad y Esparadrapo 4x5 yd blanco Supreme a $18.900.';
+    } else if (msg.includes('guantes') || msg.includes('guante')) {
+        return 'Tenemos Guantes de Látex Protex a $1.000 el par, Guantes de Nitrilo Azul (caja x 100) a $39.000 y Guantes de Vinilo a $900 el par.';
+
+    // Productos de Cuidado de la piel y dermocosmética
+    } else if (msg.includes('aceite almendras') || msg.includes('aceite argan')) {
+        return 'Tenemos Aceite de Almendras Athos (120 ml) a $9.900 y Aceite de Argán (250 ml) BCN Medical a $15.900.';
+    } else if (msg.includes('agua micelar')) {
+        return 'Contamos con Agua Micelar Natural Freshly (80 ml) a $15.900, Garnier Vitamina C (100 ml) a $16.900 y Nivea Rosas (100 ml) a $19.500.';
+    } else if (msg.includes('lubriderm')) {
+        return 'La crema Lubriderm Humectación Delicada (120 ml) cuesta $18.900, Reparación Intensiva (200 ml) $31.500 y Lubriderm UV 15 (120 ml) $20.500.';
+    } else if (msg.includes('protector solar') || msg.includes('nude')) {
+        return 'El Protector Solar Nude FPS 60+ en sachet (10 ml) cuesta $3.900 la unidad, Sun Pro SPF 80 a $4.900 y Sundark Kids a $4.500.';
+    } else if (msg.includes('vick') || msg.includes('vaporub')) {
+        return 'El Vick VapoRub de 12 g tiene un precio de $7.500.';
+
+    // Productos de Salud sexual y planificación
+    } else if (msg.includes('durex') || msg.includes('condon piel') || msg.includes('condones')) {
+        return 'Contamos con Condón Durex Máximo Placer (caja x 3) a $15.900, Condones Piel (Sabores, Retardante, Excitante o Sensitivo x 3) a $10.900 y Condón Económico a $2.500 el paquete x 3.';
+    } else if (msg.includes('bellaface') || msg.includes('diane') || msg.includes('microgynon')) {
+        return 'En anticonceptivos orales tenemos Bellaface x 21 tabs a $31.500, Diane 35 a $14.900 y Microgynon 30 a $9.500.';
+    } else if (msg.includes('copa menstrual')) {
+        return 'La Copa Menstrual Advance tiene un valor de $44.900.';
+    } else if (msg.includes('lubricante') || msg.includes('gel lubricante')) {
+        return 'El Gel Lubricante Neutro Piel (sachet) cuesta $3.000 y el Lubricante Íntimo Sen Crema Whisky (30 ml) tiene un valor de $34.900.';
+    } else if (msg.includes('prueba de embarazo')) {
+        return 'La Prueba de Embarazo en Cassette cuesta $5.000, la de marca Profamilia $12.500 y la presentación en Lapicero Chemi $13.500.';
+
+    // Productos de Bebé y maternidad
+    } else if (msg.includes('aceite johnson') || msg.includes('shampoo johnson')) {
+        return 'El Aceite Johnson’s Baby Original (100 ml) cuesta $19.500 y el Shampoo Johnson’s Baby (Manzanilla o Original 100 ml) cuesta $13.900.';
+    } else if (msg.includes('acid mantle baby')) {
+        return 'El Acid Mantle Baby de 30 g tiene un costo de $25.900.';
+    } else if (msg.includes('tetero') || msg.includes('biberon')) {
+        return 'Contamos con Biberón Corchito 5 oz a $11.900, Tetero Doble Manija 8 oz a $14.900 y Tetero Antirreflujo Baby Slim 11 oz a $22.500.';
+    } else if (msg.includes('pañales') || msg.includes('pañal bebe') || msg.includes('pañal tena')) {
+        return 'Tenemos Pañales Bebex Etapa 3-G a $1.500 la unidad ($43.000 caja x 30), Winny Etapa 2 (x 16) a $17.600 y Tena Pants Clásico M/L a $6.500 la unidad.';
+    } else if (msg.includes('pañitos') || msg.includes('pequeñin')) {
+        return 'Los Pañitos Pequeñín Almendra x 24 unidades cuestan $5.500 y la presentación x 70 unidades cuesta $12.900.';
         
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
