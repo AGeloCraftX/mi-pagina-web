@@ -216,6 +216,54 @@ function generarRespuesta(mensaje) {
         return 'Tenemos Pañales Bebex Etapa 3-G a $1.500 la unidad ($43.000 caja x 30), Winny Etapa 2 (x 16) a $17.600 y Tena Pants Clásico M/L a $6.500 la unidad.';
     } else if (msg.includes('pañitos') || msg.includes('pequeñin')) {
         return 'Los Pañitos Pequeñín Almendra x 24 unidades cuestan $5.500 y la presentación x 70 unidades cuesta $12.900.';
+
+     // Productos de Cuidado capilar
+    } else if (msg.includes('aceite capilar') || msg.includes('cebolla y romero')) {
+        return 'El Aceite Capilar de Cebolla y Romero Nutribella (10 g) cuesta $2.000 y el Aceite de Aguacate Wildlife (100 ml) para piel y cabello cuesta $6.500.';
+    } else if (msg.includes('aceite de argan capilar') || msg.includes('aceite de coco capilar')) {
+        return 'Contamos con tratamiento capilar en sobre (10 g) Lehit de Aceite de Argán o Aceite de Coco a $3.000 la unidad.';
+    } else if (msg.includes('shampoo') || msg.includes('champu')) {
+        return 'Tenemos variedad de shampoos disponibles en catálogo según la marca y presentación que busques.';
+    } else if (msg.includes('tratamiento capilar') || msg.includes('lehit')) {
+        return 'Manejamos tratamientos capilares Lehit en sobres desde $3.000.';
+    } else if (msg.includes('crema de peinar')) {
+        return 'Ofrecemos cremas para peinar de distintas marcas a partir de $5.000.';
+
+    // Productos de Cosméticos y maquillaje
+    } else if (msg.includes('polvo compactos') || msg.includes('nailen') || msg.includes('polvo nailen')) {
+        return 'El Polvo Compacto Nailen (#2, #3, #4, #5, #6) x 14 g tiene un precio de $12.500 y el Polvo Compacto Kalóe cuesta $17.900.';
+    } else if (msg.includes('esmalte masglo') || msg.includes('esmaltes')) {
+        return 'Los Esmaltes Masglo tradicionales (13.5 ml) cuestan $11.500, la línea Masglo Gel $15.500 y los Esmaltes Admiss $5.500.';
+    } else if (msg.includes('balsamo labial') || msg.includes('kiss mi')) {
+        return 'El Bálsamo Labial Kiss Mi de Vogue (4.8 g) cuesta $12.500 en sabor fresa y $13.500 en sabor uva.';
+    } else if (msg.includes('pestañina') || msg.includes('encrespador')) {
+        return 'La Pestañina Bon Shik Volumen cuesta $10.500 y los Encrespadores de Pestañas Bon Shik cuestan $11.500.';
+    } else if (msg.includes('desmaquillador') || msg.includes('pomys')) {
+        return 'Las Rueditas Desmaquilladoras Pomys (paquete x 120) cuestan $21.900 y Pomys Esencial x 50 unidades cuesta $7.500.';
+
+    // Productos de Aseo y hogar
+    } else if (msg.includes('alcanfor')) {
+        return 'El Alcanfor Yoma x 40 tabletas tiene un precio de $3.500 el paquete x 2 unidades o $70.000 la caja x 40.';
+    } else if (msg.includes('betun') || msg.includes('betún')) {
+        return 'El Betún Cherry en pasta marrón (30 g) cuesta $3.000 y el Betún Líquido Blanco Béisbol (60 ml) cuesta $11.000.';
+    } else if (msg.includes('repelente autan') || msg.includes('pica fin')) {
+        return 'El Repelente Autan en crema (196 g) cuesta $24.900, el Repelente Kids Alumblock (120 ml) cuesta $29.500 y el Pica Fin Roll-on (60 ml) $12.500.';
+    } else if (msg.includes('pond\'s limpiador') || msg.includes('ponds limpiador')) {
+        return 'El Limpiador Facial Diario Pond’s (50 g) cuesta $19.500.';
+    } else if (msg.includes('desinfectante') || msg.includes('limpieza hogar')) {
+        return 'Contamos con productos de limpieza e higiene para el hogar disponibles en tienda.';
+
+    // Productos de Higiene personal
+    } else if (msg.includes('axe') || msg.includes('desodorante axe')) {
+        return 'El Desodorante Axe Spray (152 ml) en variedades Epic Fresh o Ice Chill cuesta entre $22.500 y $23.900.';
+    } else if (msg.includes('deo pies') || msg.includes('deopies')) {
+        return 'El Deo Pies Antibacterial Spray cuesta $20.500 (180 ml), $24.900 (260 ml) y la presentación en crema de 50 g cuesta $11.900.';
+    } else if (msg.includes('dove desodorante') || msg.includes('rexona desodorante')) {
+        return 'El Desodorante Dove Aerosol cuesta $26.900, Dove Roll-on $5.500, Rexona Roll-on $14.900 y Rexona Clinical Crema $25.500.';
+    } else if (msg.includes('jabon protex') || msg.includes('jabón protex') || msg.includes('jabon dove')) {
+        return 'El Jabón Protex en barra (110 g/120 g) cuesta $5.200, el Jabón Dove Antibacterial $8.900 y el Jabón Intimó Protex Doypack (140 ml) $15.500.';
+    } else if (msg.includes('prestobarba') || msg.includes('maquina de afeitar')) {
+        return 'La Prestobarba Gillette 3 hojas cuesta $7.000, Prestobarba Venus Rosada $6.500 y Schick Xtreme 3 Sensitive $5.500 la unidad.';
         
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
