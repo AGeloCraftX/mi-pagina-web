@@ -1,7 +1,7 @@
 /* ==========================================
    RESET Y FUENTES GLOBALES
    ========================================== */
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -62,7 +62,7 @@ body::after {
    Navegación (Barra Píldora de Canva)
    ========================================== */
 .mi-header {
-    display: none; /* En la maqueta el título está dentro del contenido */
+    display: none;
 }
 
 .menu-botones {
@@ -248,119 +248,28 @@ body::after {
 }
 
 /* ==========================================
-   FOOTER PROFESIONAL DE ANCHO COMPLETO REAL
+   Footer Original (Sin Modificar)
    ========================================== */
 footer.canva-footer {
-    position: relative;
-    width: 100vw;
+    position: fixed;
+    bottom: 20px;
     left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    background: linear-gradient(135deg, #0b4f6c 0%, #011627 100%);
-    color: #ffffff;
-    padding: 60px 40px 40px 40px;
-    margin-top: 120px;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-.footer-content {
-    max-width: 1250px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-bottom: 40px;
-}
-
-.footer-col h4 {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    color: #38ef7d;
-    text-transform: uppercase;
-}
-
-.footer-col p, .footer-col ul li {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #e2e8f0;
-    margin-bottom: 8px;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li a {
-    color: #e2e8f0;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-col ul li a:hover {
-    color: #38ef7d;
-    text-decoration: underline;
-}
-
-.footer-logo-area {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.footer-logo-badge {
-    background: #38ef7d;
-    color: #0f172a;
-    font-weight: 900;
-    font-size: 28px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.footer-social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.footer-bottom {
-    max-width: 1250px;
-    margin: 25px auto 0 auto;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 12px 30px;
+    border-radius: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
-    color: #94a3b8;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    z-index: 900;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-}
 /* ==========================================
    CHAT BOT (Diseño Moderno y Botón Circular)
    ========================================== */
-
-/* BOTÓN CIRCULAR FLOTANTE */
 #chat-toggle-btn {
     position: fixed;
     bottom: 25px;
@@ -386,7 +295,6 @@ footer.canva-footer {
     background: linear-gradient(135deg, #357abd 0%, #2a5f98 100%);
 }
 
-/* VENTANA EMERGENTE DEL CHATBOT */
 .chat-container {
     width: 360px;
     height: 480px;
@@ -409,7 +317,6 @@ footer.canva-footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ENCABEZADO */
 .chat-header {
     background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
     color: white;
@@ -421,7 +328,6 @@ footer.canva-footer {
     font-size: 16px;
 }
 
-/* BOTÓN DE CERRAR CON "X" */
 #chat-close-btn {
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -442,7 +348,6 @@ footer.canva-footer {
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* ÁREA DE MENSAJES */
 .chat-mensajes {
     flex: 1;
     padding: 15px;
@@ -453,7 +358,6 @@ footer.canva-footer {
     background-color: #f8fafc;
 }
 
-/* ESTILO DE LOS MENSAJES */
 .mensaje {
     padding: 10px 14px;
     border-radius: 12px;
@@ -463,7 +367,6 @@ footer.canva-footer {
     overflow-wrap: anywhere;
 }
 
-/* MENSAJES DEL BOT */
 .mensaje.bot {
     background-color: #e2e8f0;
     color: #1e293b;
@@ -471,7 +374,6 @@ footer.canva-footer {
     border-bottom-left-radius: 2px;
 }
 
-/* MENSAJES DEL USUARIO */
 .mensaje.usuario {
     background-color: #4a90e2;
     color: white;
@@ -479,7 +381,6 @@ footer.canva-footer {
     border-bottom-right-radius: 2px;
 }
 
-/* CAMPO PARA ESCRIBIR */
 .chat-input {
     display: flex;
     padding: 12px;
@@ -503,7 +404,6 @@ footer.canva-footer {
     border-color: #4a90e2;
 }
 
-/* BOTÓN ENVIAR */
 .chat-input button {
     background-color: #4a90e2;
     color: white;
@@ -517,4 +417,99 @@ footer.canva-footer {
 
 .chat-input button:hover {
     background-color: #357abd;
+}
+
+/* ==========================================
+   OPTIMIZACIÓN MÓVIL Y VENTANAS PEQUEÑAS
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px 5px 0 5px;
+    }
+
+    #container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .menu-botones {
+        border-radius: 20px;
+        padding: 8px;
+        margin-bottom: 25px;
+    }
+
+    .menu-botones ul {
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+    }
+
+    .menu-botones ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-botones .logo-dfo {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 8px 16px;
+    }
+
+    .menu-botones ul li a:not(.logo-dfo) {
+        width: 100%;
+        text-align: center;
+        padding: 8px 16px;
+        box-sizing: border-box;
+    }
+
+    .hero-title-big {
+        font-size: 32px;
+        margin: 30px 0;
+        line-height: 1.1;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .contact-info-list {
+        align-items: center;
+    }
+
+    .contact-info-list li {
+        font-size: 14px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .grid-capsulas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .chat-container {
+        width: 92%;
+        right: 4%;
+        bottom: 80px;
+        height: 400px;
+    }
+
+    #chat-toggle-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
 }
