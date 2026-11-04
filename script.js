@@ -55,11 +55,11 @@ function generarRespuesta(mensaje) {
 
     // 2. Horarios de atención
     } else if (msg.includes('horario') || msg.includes('abierto') || msg.includes('hora')) {
-        return 'Nuestro horario de atención es de lunes a sábado de 8:00 a.m. a 9:00 p.m., y domingos/festivos de 9:00 a.m. a 6:00 p.m.';
+        return 'Nuestro horario de atención es de lunes a sábado de 8:00 a.m. a 8:00 p.m., y domingos/festivos de 9:00 a.m. a 2:00 p.m.';
 
     // 3. Servicio a domicilio
     } else if (msg.includes('domicilio') || msg.includes('envío') || msg.includes('llevar')) {
-        return '¡Sí contamos con servicio a domicilio! Puedes hacer tu pedido por este medio o llamando a nuestro número directo.';z
+        return '¡Sí contamos con servicio a domicilio! Puedes hacer tu pedido por este llamando a nuestro número directo el cual es (604 6221124).';z
 
     // 5. Métodos de pago
     } else if (msg.includes('pago') || msg.includes('tarjeta') || msg.includes('nequi') || msg.includes('efectivo')) {
@@ -71,7 +71,7 @@ function generarRespuesta(mensaje) {
 
     // 7. Ubicación
     } else if (msg.includes('dónde') || msg.includes('ubicación') || msg.includes('dirección') || msg.includes('queda')) {
-        return 'Nos encontramos en la [Escribe aquí tu dirección]. ¡Te esperamos!';
+        return 'Nos encontramos en la Cra. 42B #26 A SUR 23. ¡Te esperamos!';
 
      // Categoría: Vitaminas, suplementos y nutrición
     } else if (msg.includes('vitaminas') || msg.includes('suplementos') || msg.includes('nutrición') || msg.includes('nutricion')) {
