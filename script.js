@@ -70,7 +70,7 @@ function generarRespuesta(mensaje) {
         return 'Para medicamentos de control o bajo fórmula médica, es necesario presentar la receta física o digital vigente.';
 
     // 7. Ubicación
-    } else if (msg.includes('dónde') || msg.includes('ubicación') || msg.includes('dirección') || msg.includes('queda')) {
+    } else if (msg.includes('donde') || msg.includes('ubicacion') || msg.includes('direccion') || msg.includes('queda')) {
         return 'Nos encontramos en la Cra. 42B #26 A SUR 23. ¡Te esperamos!';
 
      // Categoría: Vitaminas, suplementos y nutrición
