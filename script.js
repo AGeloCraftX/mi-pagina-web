@@ -265,7 +265,11 @@ function generarRespuesta(mensaje) {
     } else if (msg.includes('prestobarba') || msg.includes('maquina de afeitar')) {
         return 'La Prestobarba Gillette 3 hojas cuesta $7.000, Prestobarba Venus Rosada $6.500 y Schick Xtreme 3 Sensitive $5.500 la unidad.';
 
-        
+     //cosas
+     } else if (msg.includes('le digo hola')) {
+        return 'Y ella me dice Goodbye.';
+
+    
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
         return 'Perdona no puedo ayudarte con tu solicitud.';
