@@ -15,7 +15,7 @@ body {
     position: relative;
     overflow-x: hidden;
     color: #1a1a1a;
-    padding: 20px 0 90px 0;
+    padding: 20px 0 30px 0;
 }
 
 /* Círculo decorativo gigante de Canva (Arriba a la izquierda) */
@@ -55,7 +55,8 @@ body::after {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    min-height: 85vh;
+    min-height: 80vh;
+    padding-bottom: 20px;
 }
 
 /* ==========================================
@@ -248,23 +249,21 @@ body::after {
 }
 
 /* ==========================================
-   Footer Original (Sin Modificar)
+   Footer Original Ajustado (No flota de forma fija en móvil)
    ========================================== */
 footer.canva-footer {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     width: 90%;
     max-width: 1200px;
+    margin: 50px auto 20px auto;
     background: #ffffff;
-    padding: 12px 30px;
+    padding: 15px 30px;
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    z-index: 900;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    z-index: 10;
 }
 
 /* ==========================================
@@ -496,6 +495,16 @@ footer.canva-footer {
     .grid-capsulas {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+
+    footer.canva-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        width: 92%;
+        padding: 15px;
+        border-radius: 20px;
+        margin-top: 30px;
     }
 
     .chat-container {
