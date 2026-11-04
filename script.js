@@ -39,7 +39,7 @@ function generarRespuesta(mensaje) {
 
     // 1. Saludos
     if (msg.includes('hola') || msg.includes('saludos') || msg.includes('buenas')) {
-        return '¡Hola! Soy un asistente virtual puedes preguntar sobre las categorías de productos o uno en especifico mira prueba con mencionar cualquier producto ';
+        return '¡Hola! Soy un asistente virtual puedes preguntar sobre las categorías de productos como: Vitaminas, suplementos y nutrición, Salud sexual y planificación, Naturales y fitoterapéuticos, Misceláneos, Medicamentos, Material médico y primeros auxilios, Higiene personal, Cuidado de la piel y dermocosmética, Cuidado capilar, Cosméticos y maquillaje, Bebé y maternidad, Aseo y hogar  ';
 
     // 2. Sobre ti / Identidad
     } else if (msg.includes('nombre') || msg.includes('quién eres')) {
@@ -264,6 +264,8 @@ function generarRespuesta(mensaje) {
         return 'El Jabón Protex en barra (110 g/120 g) cuesta $5.200, el Jabón Dove Antibacterial $8.900 y el Jabón Intimó Protex Doypack (140 ml) $15.500.';
     } else if (msg.includes('prestobarba') || msg.includes('maquina de afeitar')) {
         return 'La Prestobarba Gillette 3 hojas cuesta $7.000, Prestobarba Venus Rosada $6.500 y Schick Xtreme 3 Sensitive $5.500 la unidad.';
+
+     //SE VIENEN COSITAS
         
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
