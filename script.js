@@ -39,7 +39,7 @@ function generarRespuesta(mensaje) {
 
     // 1. Saludos
     if (msg.includes('hola') || msg.includes('saludos') || msg.includes('buenas')) {
-        return '¡Hola! ¿En qué te puedo ayudar hoy?';
+        return '¡Hola! Soy un asistente virtual puedes preguntar sobre las categorías de productos o uno en especifico mira prueba con mencionar cualquier producto ';
 
     // 2. Sobre ti / Identidad
     } else if (msg.includes('nombre') || msg.includes('quién eres')) {
