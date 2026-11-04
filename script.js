@@ -38,7 +38,7 @@ function generarRespuesta(mensaje) {
     let msg = mensaje.toLowerCase();
 
     // 1. Saludos
-    if (msg.includes('hola') || msg.includes('saludos') || msg.includes('buenas')) {
+    if (msg.includes('hello') || msg.includes('saludos') || msg.includes('buenas')) {
         return '¡Hola! Soy un asistente virtual puedes preguntar sobre las categorías de productos como: Vitaminas, suplementos y nutrición, Salud sexual y planificación, Naturales y fitoterapéuticos, Misceláneos, Medicamentos, Material médico y primeros auxilios, Higiene personal, Cuidado de la piel y dermocosmética, Cuidado capilar, Cosméticos y maquillaje, Bebé y maternidad, Aseo y hogar, Ademas puedes perguntar sobre informacion general de la Farmacia ';
 
     // 2. Sobre ti / Identidad
