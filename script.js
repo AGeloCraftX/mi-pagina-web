@@ -265,18 +265,6 @@ function generarRespuesta(mensaje) {
     } else if (msg.includes('prestobarba') || msg.includes('maquina de afeitar')) {
         return 'La Prestobarba Gillette 3 hojas cuesta $7.000, Prestobarba Venus Rosada $6.500 y Schick Xtreme 3 Sensitive $5.500 la unidad.';
 
-     //SE VIENEN COSITAS
-     } else if (msg.includes('le digo hola')) {
-        return 'Y ella me dice goodbye.';
-    } else if (msg.includes('le digo nena')) {
-        return 'Como tu ya no hay.';
-    } else if (msg.includes('me dice que tiene novio pro yo no le creo')) {
-        return 'Y es que se complica cada vez que la veo.';
-    } else if (msg.includes('tu que haces en mi juego')) {
-        return 'Acaso quieres que te mate?.';
-    } else if (msg.includes('quien es Dios')) {
-        return 'El Ser Supremo, creador, sustentador y gobernador del universo.';
-    }
         
     // 5. Respuesta por defecto (si no coincide con ninguna anterior)
     } else {
